@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+#main {
+  background-color: hsl(30, 38%, 92%);
+  width: auto;
+  height: 97vh;
+  position: relative;
+}
+
+#card {
+  display: flex;
+  width: 550px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 375px) {
+  #card {
+    width: 350px;
+    height: 600px;
+    flex-direction: column;
+  }
+}
+#desk-img {
+  width: 50%;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+#mobile-img {
+  display: none;
+}
+@media (max-width: 375px) {
+  #desk-img {
+    display: none;
+  }
+  #mobile-img {
+    display: block;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 40%;
+  }
+}
+#content {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.4em;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: hsl(228, 12%, 48%);
+  font-size: 13px;
+  align-content: center;
+}
+@media (max-width: 375px) {
+  #content {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    height: 60%;
+  }
+}
+#content > p:first-child {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+#content h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2.4em;
+  color: hsl(212, 21%, 14%);
+}
+#content h2 + p {
+  line-height: 1.5;
+}
+#content div {
+  display: flex;
+  align-items: center;
+  font-family: "Fraunces", serif;
+}
+@media (max-width: 375px) {
+  #content div {
+    padding-top: 30px;
+  }
+}
+#content div p:first-child {
+  font-size: 2.4em;
+  color: hsl(158, 36%, 37%);
+}
+#content div p:nth-child(2) {
+  text-decoration: line-through;
+  padding-left: 2em;
+}
+
+#content button {
+  background-color: hsl(158, 36%, 37%);
+  height: 45px;
+  border: none;
+  border-radius: 7px;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+#content button:hover {
+  cursor: pointer;
+  background-color: hsl(140, 37%, 18%);
+}
+svg {
+  padding-right: 10px;
+}
+
+.attribution {
+  background-color: hsl(30, 38%, 92%);
+  height: 3vh;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
